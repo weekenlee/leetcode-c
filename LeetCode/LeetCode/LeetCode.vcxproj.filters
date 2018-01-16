@@ -18,5 +18,8 @@
     <ClCompile Include="twosum.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="add_two_numbers.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

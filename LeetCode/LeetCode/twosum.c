@@ -42,7 +42,7 @@ static int* twosum(int *nums, int numsize, int target)
 	return NULL;
 }
 
-int main(void)
+/*int main(void)
 {
 	//int nums[] = {-1, -2, -3, -4, -5};
 	//int target = -8;
@@ -62,3 +62,4 @@ int main(void)
 	char c = getchar();
 	return 0;
 }
+*/
