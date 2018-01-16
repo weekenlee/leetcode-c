@@ -80,6 +80,19 @@ static struct ListNode *node_build(const char* digits)
 	return res;
 }
 
+static struct ListNode* revertList(struct ListNode* ln)
+{
+	struct ListNode *pre = ln, *next = ln, *head = ln;
+	while(ln != NULL){
+		next = ln->next;
+		ln->next = pre;
+		pre = ln;
+		ln = next;
+	}
+	head->next = NULL;
+	return pre;
+}
+
 static void show(struct ListNode* ln)
 {
 	int sum = 0, factor = 1;
@@ -107,6 +120,9 @@ int main(int argc, char **argv)
 	show(l1);
 	show(l2);
 	show(res);
+	show(revertList(l1));
+	show(revertList(l2));
+	show(revertList(res));
 	char c = getchar();
 	return 0;
 }
