@@ -106,13 +106,14 @@ static void show(struct ListNode* ln)
 	//printf("%d\n", sum);
 }
 
+/*
 int main(int argc, char **argv)
 {
-	/*
+	
 	if (argc < 3) {
 		fprintf(stderr, "Usage: ./test n1 n2\n");
 		exit(-1);
-	}*/
+	}
 
 	struct ListNode *l1 = node_build("12345678912324234");
 	struct ListNode *l2 = node_build("12345678912323424");
@@ -126,3 +127,4 @@ int main(int argc, char **argv)
 	char c = getchar();
 	return 0;
 }
+*/
