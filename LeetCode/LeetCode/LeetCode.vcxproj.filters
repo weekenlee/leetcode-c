@@ -24,5 +24,8 @@
     <ClCompile Include="longest_substring_without_repeat.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="median_of_two_sorted_array.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

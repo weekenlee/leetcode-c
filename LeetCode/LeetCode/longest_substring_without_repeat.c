@@ -33,10 +33,11 @@ static int lengthOfLongestSubstring(char* s)
 	return max_len;
 }
 
+/*
 int main(int argc, char **argv)
 {
-
 	printf("%d\n", lengthOfLongestSubstring("abcefabcefgaa"));
 	char c = getchar();
 	return 0;
 }
+*/
