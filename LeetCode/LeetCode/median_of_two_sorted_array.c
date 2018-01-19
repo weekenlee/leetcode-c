@@ -41,6 +41,7 @@ static double findMedianSortedArrays(int * num1, int sizenum1, int *num2, int si
 	}
 }
 
+/*
 int main(int argc, char **argv)
 {
 	int r1[] = { 1 };
@@ -97,3 +98,4 @@ int main(int argc, char **argv)
 	char c = getchar();
 	return 0;
 }
+*/
