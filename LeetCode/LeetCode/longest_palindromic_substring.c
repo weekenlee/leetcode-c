@@ -76,10 +76,11 @@ static char *longestPalindrom(char *s)
 	return palindrome;
 }
 
-
+/*
 int main()
 {
 	printf("%s\n", longestPalindrom("abcdeffedcba"));
 	char c = getchar();
 	return 0;
 }
+*/

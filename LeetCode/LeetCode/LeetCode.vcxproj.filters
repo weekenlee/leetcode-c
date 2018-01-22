@@ -30,5 +30,8 @@
     <ClCompile Include="longest_palindromic_substring.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="zigzag_conversion.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
