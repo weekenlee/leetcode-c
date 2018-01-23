@@ -30,10 +30,12 @@ static char * convert(char *s, int numRows) {
 	return newstr;
 }
 
+
+/*
 int main(int argc, char **argv)
 {
-
 	printf("%s\n", convert("PAYPALISHIRING", 3));
 	char c = getchar();
 	return 0;
 }
+*/
