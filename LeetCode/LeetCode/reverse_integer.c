@@ -20,6 +20,7 @@ static int reverse(int x)
 #define TEST(n, e) printf("%12d  =>  %-12d  %s!\n", n, reverse(n), e == reverse(n)?"passed":"failed")
 
 
+/*
 int main(int argc, char**argv)
 {
 	//basic cases
@@ -40,4 +41,4 @@ int main(int argc, char**argv)
 	printf("%12d  =>  %-12d  %s!\n", n, reverse(n), reverse(reverse(n)) == n ? "passed" : "failed");
 	char c = getchar();
 	return 0;
-}
+}*/
