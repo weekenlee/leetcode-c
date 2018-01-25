@@ -120,6 +120,7 @@
     <ClCompile Include="longest_palindromic_substring.c" />
     <ClCompile Include="longest_substring_without_repeat.c" />
     <ClCompile Include="median_of_two_sorted_array.c" />
+    <ClCompile Include="palindrome_number.c" />
     <ClCompile Include="reverse_integer.c" />
     <ClCompile Include="twosum.c" />
     <ClCompile Include="zigzag_conversion.c" />
