@@ -51,11 +51,11 @@ static bool isPalindrome2(int x)
 }
 
 
-int main()
-{
-	printf("%s\n", isPalindrome(atoi("123321")) ? "true" : "false");
-	printf("%s\n", isPalindrome2(atoi("123321")) ? "true" : "false");
-
-	char c = getchar();
-	return 0;
-}
+//int main()
+//{
+//	printf("%s\n", ispalindrome(atoi("123321")) ? "true" : "false");
+//	printf("%s\n", ispalindrome2(atoi("123321")) ? "true" : "false");
+//
+//	char c = getchar();
+//	return 0;
+//}

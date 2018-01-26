@@ -42,5 +42,8 @@
     <ClCompile Include="palindrome_number.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="regular_expression.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
