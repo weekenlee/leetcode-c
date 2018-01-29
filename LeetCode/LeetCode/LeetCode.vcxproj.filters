@@ -45,5 +45,8 @@
     <ClCompile Include="regular_expression.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="container_with_most_water.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -31,11 +31,11 @@ bool isMatch(char *s, char *p)
 
 	return false;
 }
-
-
-int main(int argc, char **argv)
-{
-	printf("%s\n", isMatch("ababcaa","abcab.*") ? "true" : "false");
-	char c = getchar();
-	return 0;
-}
+//
+//
+//int main(int argc, char **argv)
+//{
+//	printf("%s\n", isMatch("ababcaa","abcab.*") ? "true" : "false");
+//	char c = getchar();
+//	return 0;
+//}
