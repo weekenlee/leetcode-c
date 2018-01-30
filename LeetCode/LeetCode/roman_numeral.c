@@ -63,6 +63,23 @@ static void num2char(char **num, int bit, int n)
 static char roman_numeral[64];
 
 
+//基本字符
+//I
+//V
+//X
+//L
+//C
+//D
+//M
+//相应的阿拉伯数字表示为
+//1
+//5
+//10
+//50
+//100
+//500
+//1000
+//10进制数字向0~3999的罗马数字的转换
 static char *intToRoman(int num) {
 	char *p = &roman_numeral[0];
 	int thousand_bit = num / 1000;
