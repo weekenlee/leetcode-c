@@ -48,5 +48,8 @@
     <ClCompile Include="container_with_most_water.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="roman_numeral.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

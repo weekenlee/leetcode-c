@@ -33,13 +33,14 @@ static int maxArea(int *height, int heightSize)
 	return area_max;
 }
 
-int main(int argc, char **argv)
-{
-	int i, count = argc - 1;
-	int *nums = malloc(count * sizeof(int));
-	for (i = 0; i < count; i++) {
-		nums[i] = atoi(argv[i + 1]);
-	}
-	printf("%d\n", maxArea(nums, count));
-	return 0;
-}
+
+//int main(int argc, char **argv)
+//{
+//	int i, count = argc - 1;
+//	int *nums = malloc(count * sizeof(int));
+//	for (i = 0; i < count; i++) {
+//		nums[i] = atoi(argv[i + 1]);
+//	}
+//	printf("%d\n", maxArea(nums, count));
+//	return 0;
+//}
