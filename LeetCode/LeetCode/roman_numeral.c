@@ -138,11 +138,11 @@ int romanToInt(char* s) {
 	return res;
 }
 
-int main(int argc, char **argv) {
-	//printf("%s\n", intToRoman(atoi(argv[1])));
-
-	printf("%s\n", intToRoman(atoi("5234")));
-	printf("%d\n", romanToInt(intToRoman(atoi("5234"))));
-	char c = getchar();
-	return 0;
-}
+//int main(int argc, char **argv) {
+//	//printf("%s\n", intToRoman(atoi(argv[1])));
+//
+//	printf("%s\n", intToRoman(atoi("5234")));
+//	printf("%d\n", romanToInt(intToRoman(atoi("5234"))));
+//	char c = getchar();
+//	return 0;
+//}

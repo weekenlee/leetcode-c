@@ -51,5 +51,8 @@
     <ClCompile Include="roman_numeral.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="common_prefix.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
