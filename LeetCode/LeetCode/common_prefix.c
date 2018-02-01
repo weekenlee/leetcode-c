@@ -23,10 +23,10 @@ static char* longestCommonPrefix(char** strs, int strSize)
 	return result;
 }
 
-int main(int argc, char **argv)
-{
-	char *s[] = { "abcdef", "abc", "abc"};
-	printf("%s\n", longestCommonPrefix(s, 3));
-	char c = getchar();
-	return 0;
-}
+//int main(int argc, char **argv)
+//{
+//	char *s[] = { "abcdef", "abc", "abc"};
+//	printf("%s\n", longestCommonPrefix(s, 3));
+//	char c = getchar();
+//	return 0;
+//}

@@ -126,6 +126,7 @@
     <ClCompile Include="regular_expression.c" />
     <ClCompile Include="reverse_integer.c" />
     <ClCompile Include="roman_numeral.c" />
+    <ClCompile Include="three_sum.c" />
     <ClCompile Include="twosum.c" />
     <ClCompile Include="zigzag_conversion.c" />
   </ItemGroup>

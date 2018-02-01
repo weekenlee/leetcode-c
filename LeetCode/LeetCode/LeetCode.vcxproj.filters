@@ -54,5 +54,8 @@
     <ClCompile Include="common_prefix.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="three_sum.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
