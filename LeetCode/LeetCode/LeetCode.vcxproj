@@ -127,6 +127,7 @@
     <ClCompile Include="reverse_integer.c" />
     <ClCompile Include="roman_numeral.c" />
     <ClCompile Include="three_sum.c" />
+    <ClCompile Include="three_sum_closest.c" />
     <ClCompile Include="twosum.c" />
     <ClCompile Include="zigzag_conversion.c" />
   </ItemGroup>

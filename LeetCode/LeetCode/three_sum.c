@@ -47,18 +47,18 @@ static int** threeSum(int *nums, int numsSize, int *returnSize)
 	return results;
 }
 
-int main(void)
-{
-	int i, count;
-	//int nums[] = { -1, 0, 1, 2, -1, -4 };
-	//int nums[] = { 0, 0, 0 };
-	//int nums[] = { -1, 0, 1, 0 };
-	int nums[] = { -2,0,0,2,2 };
-	int **triplets = threeSum(nums, sizeof(nums) / sizeof(*nums), &count);
-	for (i = 0; i < count; i++) {
-		printf("%d %d %d\n", triplets[i][0], triplets[i][1], triplets[i][2]);
-	}
-
-	char c = getchar();
-	return 0;
-}
+//int main(void)
+//{
+//	int i, count;
+//	//int nums[] = { -1, 0, 1, 2, -1, -4 };
+//	//int nums[] = { 0, 0, 0 };
+//	//int nums[] = { -1, 0, 1, 0 };
+//	int nums[] = { -2,0,0,2,2 };
+//	int **triplets = threeSum(nums, sizeof(nums) / sizeof(*nums), &count);
+//	for (i = 0; i < count; i++) {
+//		printf("%d %d %d\n", triplets[i][0], triplets[i][1], triplets[i][2]);
+//	}
+//
+//	char c = getchar();
+//	return 0;
+//}
