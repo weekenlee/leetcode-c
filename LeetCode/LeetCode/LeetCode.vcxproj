@@ -119,6 +119,7 @@
     <ClCompile Include="atoi.c" />
     <ClCompile Include="common_prefix.c" />
     <ClCompile Include="container_with_most_water.c" />
+    <ClCompile Include="letter_combinations.c" />
     <ClCompile Include="longest_palindromic_substring.c" />
     <ClCompile Include="longest_substring_without_repeat.c" />
     <ClCompile Include="median_of_two_sorted_array.c" />

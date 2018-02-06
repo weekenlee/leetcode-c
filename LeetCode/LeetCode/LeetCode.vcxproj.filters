@@ -60,5 +60,8 @@
     <ClCompile Include="three_sum_closest.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="letter_combinations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
