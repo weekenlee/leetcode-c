@@ -63,5 +63,8 @@
     <ClCompile Include="letter_combinations.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="four_sum.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -81,14 +81,14 @@ char** letterCombinations(char* digits, int* returnSize) {
 	return letters;
 }
 
-int main(int argc, char **argv) {
-	int i, size = 0;
-	char ** letters = letterCombinations("23", &size);
-	for (i = 0; i < size; i++) {
-		printf("%s\n", letters[i]);
-		free(letters[i]);
-	}
-	free(letters);
-	char c = getchar();
-	return 0;
-}
+//int main(int argc, char **argv) {
+//	int i, size = 0;
+//	char ** letters = letterCombinations("23", &size);
+//	for (i = 0; i < size; i++) {
+//		printf("%s\n", letters[i]);
+//		free(letters[i]);
+//	}
+//	free(letters);
+//	char c = getchar();
+//	return 0;
+//}
