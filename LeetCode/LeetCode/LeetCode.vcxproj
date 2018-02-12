@@ -132,6 +132,7 @@
     <ClCompile Include="three_sum.c" />
     <ClCompile Include="three_sum_closest.c" />
     <ClCompile Include="twosum.c" />
+    <ClCompile Include="valid_parentheses.c" />
     <ClCompile Include="zigzag_conversion.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

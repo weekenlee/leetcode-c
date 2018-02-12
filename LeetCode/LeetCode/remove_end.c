@@ -19,7 +19,7 @@ static struct ListNode* removeNthFromEnd(struct ListNode* head , int n)
 
 	while (p->next != NULL) {
 		p = p->next;
-		prev = prev->next;
+		prev = prev->next;	
 	}
 
 	struct ListNode *tmp = prev->next;
@@ -32,29 +32,29 @@ static struct ListNode* removeNthFromEnd(struct ListNode* head , int n)
 }
 
 
-int main(int argc, char **argv)
-{
-	int i;
-	struct ListNode *list, *p, *prev = NULL;
-	for (i = 1; i < 5; i++) {
-		p = malloc(sizeof(*p));
-		p->val = i;
-		p->next = NULL;
-		if (i == 1) {
-			list = p;
-		}
-		if (prev != NULL) {
-			prev->next = p;
-		}
-		prev = p;
-	}
-	
-	list = removeNthFromEnd(list,2);
-	if (list != NULL) {
-		for (p = list; p != NULL; p = p->next) {
-			printf("%d\n", p->val);
-		}
-	}
-	char c = getchar();
-	return 0;
-}
+//int main(int argc, char **argv)
+//{
+//	int i;
+//	struct ListNode *list, *p, *prev = NULL;
+//	for (i = 1; i < 5; i++) {
+//		p = malloc(sizeof(*p));
+//		p->val = i;
+//		p->next = NULL;
+//		if (i == 1) {
+//			list = p;
+//		}
+//		if (prev != NULL) {
+//			prev->next = p;
+//		}
+//		prev = p;
+//	}
+//	
+//	list = removeNthFromEnd(list,2);
+//	if (list != NULL) {
+//		for (p = list; p != NULL; p = p->next) {
+//			printf("%d\n", p->val);
+//		}
+//	}
+//	char c = getchar();
+//	return 0;
+//}
