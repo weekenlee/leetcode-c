@@ -30,6 +30,7 @@ static bool isValid(char *s)
 			break;
 		default:
 			return false;
+
 		}
 		s++;
 	}
