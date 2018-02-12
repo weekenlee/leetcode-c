@@ -74,7 +74,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -126,6 +126,7 @@
     <ClCompile Include="median_of_two_sorted_array.c" />
     <ClCompile Include="palindrome_number.c" />
     <ClCompile Include="regular_expression.c" />
+    <ClCompile Include="remove_end.c" />
     <ClCompile Include="reverse_integer.c" />
     <ClCompile Include="roman_numeral.c" />
     <ClCompile Include="three_sum.c" />

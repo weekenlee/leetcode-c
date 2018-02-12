@@ -66,5 +66,8 @@
     <ClCompile Include="four_sum.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="remove_end.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
