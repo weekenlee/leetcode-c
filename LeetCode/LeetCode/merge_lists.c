@@ -40,20 +40,20 @@ static struct ListNode* mergeTwoLists(struct ListNode *l1, struct ListNode *l2)
 	return dummy.next;
 }
 
-int main(int argc, char **argv)
-{
-	struct ListNode l1;
-	l1.val = 2;
-	l1.next = NULL;
-	struct ListNode l2;
-	l2.val = 1;
-	l2.next = NULL;
-	struct ListNode * list = mergeTwoLists(&l1, &l2);
-	while (list != NULL) {
-		printf("%d ", list->val);
-		list = list->next;
-	}
-	printf("\n");
-	char c = getchar();
-	return 0;
-}
+//int main(int argc, char **argv)
+//{
+//	struct ListNode l1;
+//	l1.val = 2;
+//	l1.next = NULL;
+//	struct ListNode l2;
+//	l2.val = 1;
+//	l2.next = NULL;
+//	struct ListNode * list = mergeTwoLists(&l1, &l2);
+//	while (list != NULL) {
+//		printf("%d ", list->val);
+//		list = list->next;
+//	}
+//	printf("\n");
+//	char c = getchar();
+//	return 0;
+//}

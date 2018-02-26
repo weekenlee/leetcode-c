@@ -75,5 +75,8 @@
     <ClCompile Include="merge_lists.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="parentheses.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
