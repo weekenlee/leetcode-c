@@ -36,10 +36,10 @@ static bool isValid(char *s)
 	}
 }
 
-int main(int argc, char **argv)
-{
-
-	printf("%s\n", isValid("()[{}]") ? "true" : "false");
-	char c = getchar();
-	return 0;
-}
+//int main(int argc, char **argv)
+//{
+//
+//	printf("%s\n", isValid("()[{}]") ? "true" : "false");
+//	char c = getchar();
+//	return 0;
+//}
