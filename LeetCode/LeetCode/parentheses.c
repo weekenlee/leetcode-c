@@ -2,6 +2,43 @@
 #include <stdio.h>
 #include <string.h>
 
+
+void myhelper(int left, int right, char* path)
+{
+	if (left == 0 && right == 0)
+	{
+		printf("%s\n", path);
+		return;
+	}
+	if (left != 0) {
+		char *newpath = malloc(sizeof(path) + 1 * sizeof(char));
+		memcpy(newpath, path, sizeof(path) + 1 * sizeof(char));
+		char *i = newpath;
+		while (*i != '\0') i++;
+		*i++ = '(';
+		*i = '\0';
+		myhelper(left - 1, right, newpath);
+	}
+
+	if (right != 0 && left < right) {
+		char *newpath = malloc(sizeof(path) + 1 * sizeof(char));
+		memcpy(newpath, path, sizeof(path) + 1 * sizeof(char));
+		char *i = newpath;
+		while (*i != '\0') i++;
+		*i++ = ')';
+		*i = '\0';
+		myhelper(left, right - 1, newpath);
+	}
+
+}
+void generateParenthesis2(int n)
+{
+	char *path = malloc((2 * n + 1) * sizeof(char));
+	myhelper(n, n, path);
+	return;
+}
+
+
 static char ** generateParenthesis(int n, int* returnSize)
 {
 	int left, right, cap = 5000, count = 0;
@@ -50,10 +87,12 @@ int main(int argc, char **argv)
 {
 	int i, count;
 
+	printf("解法1:\n");
 	char ** lists = generateParenthesis(5, &count);
 	for (i = 0; i < count; i++) {
 		printf("%s\n", lists[i]);
 	}
-	char c = getchar();
+	printf("解法2:\n");
+	generateParenthesis2(5);
 	return 0;
 }
