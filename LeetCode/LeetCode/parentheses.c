@@ -82,17 +82,17 @@ static char ** generateParenthesis(int n, int* returnSize)
 	*returnSize = count;
 	return parentheses;
 }
-
-int main(int argc, char **argv)
-{
-	int i, count;
-
-	printf("解法1:\n");
-	char ** lists = generateParenthesis(5, &count);
-	for (i = 0; i < count; i++) {
-		printf("%s\n", lists[i]);
-	}
-	printf("解法2:\n");
-	generateParenthesis2(5);
-	return 0;
-}
+//
+//int main(int argc, char **argv)
+//{
+//	int i, count;
+//
+//	printf("解法1:\n");
+//	char ** lists = generateParenthesis(5, &count);
+//	for (i = 0; i < count; i++) {
+//		printf("%s\n", lists[i]);
+//	}
+//	printf("解法2:\n");
+//	generateParenthesis2(5);
+//	return 0;
+//}
