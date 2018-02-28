@@ -40,12 +40,14 @@ static struct ListNode* mergeTwoLists(struct ListNode *l1, struct ListNode *l2)
 	return dummy.next;
 }
 
-static struct ListNode* mergeKLists(struct ListNode ** lists, int listSize)
+static struct ListNode* mergeKLists(struct ListNode ** lists, int listsSize)
 {
-	if (listSize == 0)
+	if (listsSize == 0) {
 		return NULL;
-	if (listSize == 1)
+	}
+	if (listsSize == 1) {
 		return lists[0];
+	}
 
 	int i, index;
 	struct ListNode dummy, *p, *prev;
@@ -56,7 +58,7 @@ static struct ListNode* mergeKLists(struct ListNode ** lists, int listSize)
 	while (index != -1) {
 		int min = INT_MAX;
 		index = -1;
-		for (i = 0; i < listSize; i++) {
+		for (i = 0; i < listsSize; i++) {
 			if (lists[i] != NULL && lists[i]->val < min) {
 				min = lists[i]->val;
 				index = i;
@@ -89,7 +91,7 @@ int main(int argc, char **argv)
 		printf("%d ", list->val);
 		list = list->next;
 	}
-	printf("end merge two list\n");
+	printf("\nend merge two list\n");
 
 
 
@@ -105,6 +107,7 @@ int main(int argc, char **argv)
 		prev->next = p;
 		prev = p;
 	}
+	printf("list1 ");
 	for (p = dummy1.next; p != NULL; p = p->next) {
 		printf("%d ", p->val);
 	}
@@ -119,6 +122,7 @@ int main(int argc, char **argv)
 		prev->next = p;
 		prev = p;
 	}
+	printf("list2 ");
 	for (p = dummy2.next; p != NULL; p = p->next) {
 		printf("%d ", p->val);
 	}
@@ -126,9 +130,10 @@ int main(int argc, char **argv)
 
 	size = 2;
 	lists = malloc(size * sizeof(struct ListNode *));
-	lists[0] = NULL;//dummy1.next;
-	lists[1] = NULL;//dummy2.next;
+	lists[0] = dummy1.next;
+	lists[1] = dummy2.next;
 	sorted = mergeKLists(lists, size);
+	printf("result ");
 	for (p = sorted; p != NULL; p = p->next) {
 		printf("%d ", p->val);
 	}
