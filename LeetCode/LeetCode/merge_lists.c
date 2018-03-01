@@ -78,6 +78,32 @@ static struct ListNode* mergeKLists(struct ListNode ** lists, int listsSize)
 	return dummy.next;
 }
 
+static struct ListNode* swapPairs(struct ListNode *head)
+{
+	if (head == NULL) {
+		return NULL;
+	}
+
+	struct ListNode dummy;
+	dummy.next = head;
+
+	struct ListNode *prev = &dummy;
+	struct ListNode *p = dummy.next;
+	struct ListNode *next = p->next;
+
+	while (p != NULL && next != NULL) {
+		prev->next = next;
+		p->next = next->next;
+		next->next = p;
+		prev = p;
+		p = p->next;
+		if (p != NULL) {
+			next = p->next;
+		}
+	}
+	return dummy.next;
+}
+
 int main(int argc, char **argv)
 {
 	struct ListNode  l1;
@@ -138,6 +164,15 @@ int main(int argc, char **argv)
 		printf("%d ", p->val);
 	}
 	putchar('\n');
+
+	list = swapPairs(sorted);
+	printf("swap result ");
+	for (p = list; p != NULL; p = p->next) {
+		printf("%d ", p->val);
+	}
+	putchar('\n');
+
+
 	char c = getchar();
 	return 0;
 }
