@@ -104,6 +104,31 @@ static struct ListNode* swapPairs(struct ListNode *head)
 	return dummy.next;
 }
 
+
+static struct ListNode* reverseKGroup(struct ListNode* head, int k)
+{
+	int i, len = 0;
+	struct ListNode dummy;
+	struct ListNode *p = head;
+	struct ListNode *prev = &dummy;
+	dummy.next = head;
+
+	for (p = head; p != NULL; p = p->next) {
+		if (++len % k == 0) {
+			struct ListNode *begin = prev->next;
+			for (i = 1; i < k; i++) {
+				struct ListNode *next = begin->next;
+				begin->next = next->next;
+				next->next = prev->next;
+				prev->next = next;
+			}
+			p = begin;
+			prev = p;
+		}
+	}
+	return dummy.next;
+}
+
 int main(int argc, char **argv)
 {
 	struct ListNode  l1;
@@ -172,6 +197,12 @@ int main(int argc, char **argv)
 	}
 	putchar('\n');
 
+	list = reverseKGroup(list, 4);
+	printf("revert k ");
+	for (p = list; p != NULL; p = p->next) {
+		printf("%d ", p->val);
+	}
+	putchar('\n');
 
 	char c = getchar();
 	return 0;
