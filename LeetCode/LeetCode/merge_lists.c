@@ -129,7 +129,7 @@ static struct ListNode* reverseKGroup(struct ListNode* head, int k)
 	return dummy.next;
 }
 
-int main(int argc, char **argv)
+int main2(int argc, char **argv)
 {
 	struct ListNode  l1;
 	l1.val = 2;
