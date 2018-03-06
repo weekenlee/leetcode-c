@@ -131,6 +131,7 @@
     <ClCompile Include="remove_end.c" />
     <ClCompile Include="reverse_integer.c" />
     <ClCompile Include="rm_dup.c" />
+    <ClCompile Include="rm_elem.c" />
     <ClCompile Include="roman_numeral.c" />
     <ClCompile Include="three_sum.c" />
     <ClCompile Include="three_sum_closest.c" />
