@@ -11,6 +11,16 @@ int strStr(char *haystack, char *needle)
 	}
 
 	int hlen = strlen(haystack);
+	int nlen = strlen(needle);
+
+	if (hlen < nlen) {
+		return -1;
+	}
+
+	if (nlen == 0) {
+		return 0;
+	}
+
 }
 
 #endif
