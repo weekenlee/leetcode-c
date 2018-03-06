@@ -12,7 +12,7 @@ static int removeElement(int *nums, int numsSize, int val)
 	return count;
 }
 
-int main()
+int main11()
 {
 	int i, size = 10;
 	int *nums = malloc(size * sizeof(int));
