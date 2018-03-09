@@ -105,7 +105,7 @@ static int strStr(char* haystack, char* needle)
 	return -1;
 }
 
-int main(int argc, char **argv)
+int main28(int argc, char **argv)
 {
 
 	printf("%d\n", strStr("abcdefg", "efg"));
