@@ -67,4 +67,59 @@ static int find(char *word, struct hlist_head *heads, int size) {
 	return -1;
 }
 
-static void add
+static void add(char** words, int index, struct hlist_head *heads, int size, int *freqs)
+{
+	int hash = BKDRHash(words[index], size);
+	struct hlist_node *pos;
+	struct word_node *wn;
+	hlist_for_each(pos, &heads[hash]) {
+		wn = list_entry(pos, struct word_node, node);
+		if (!strcmp(wn->word, words[index])) {
+			freqs[wn->index]++;
+			return;
+		}
+	}
+	wn = malloc(sizeof(*wn));
+	wn->word = words[index];
+	wn->index = index;
+	hlist_add_head(&wn->node, &heads[hash]);
+	freqs[wn->index]++;
+}
+
+
+static int *findSubstring(char *s, char **words, int wordsSize, int *returnSize)
+{
+	if (*s == '\0' || wordsSize == 0) {
+		*returnSize = 0;
+		return NULL;
+	}
+	int i, j, cap = 10000, count = 0;
+	int hash_size = wordsSize;
+	struct hlist_head *heads = malloc(hash_size * sizeof(*heads));
+	for (i = 0; i < hash_size; i++) {
+		INIT_HLIST_HEAD(&heads[i]);
+	}
+
+	int *freqs = malloc(wordsSize * sizeof(int));
+	memset(freqs, 0, wordsSize * sizeof(int));
+
+	for (i = 0; i < wordsSize; i++) {
+		add(words, i, heads, hash_size, freqs);
+	}
+
+	int len = strlen(words[0]);
+	int length = len * wordsSize - 1;
+	char *word = malloc(len + 1);
+	word[len] = '\0';
+	int *indexes = malloc(cap * sizeof(int));
+	for (i = 0; s[i] != '\0'; i++) {
+		memcpy(word, s + i, len);
+		indexes[i] = find(word, heads, hash_size);
+	}
+
+	int *results = malloc(cap * sizeof(int));
+	int *fqs = malloc(wordsSize * sizeof(int));
+	for (i = 0; s[i + length] != '\0'; i++) {
+		memset(fqs, 0, wordsSize * sizeof(int));
+	}
+}
