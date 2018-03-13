@@ -3,6 +3,11 @@
 #include <stdbool.h>
 #include <string.h>
 
+
+//实现该方法可以分三步：
+//0 算出a.node在a里面的偏移，可以通过将零地址强制转换成struct word_node格式, (struct word_node *)0, 那么((struct word_node *)0)->node 即是偏移大小
+//1 已知a.node地址和在a里面的偏移，即可通过a.node 地址减去偏移得到a的地址, (char *)ptr - ((struct word_node *)0)->node
+//2 最后将得到的地址强制 转换成struct word_node 格式, (struct word_node *)((char *)ptr - ((struct word_node *)0)->node) 即为所求的指针
 #define container_of(ptr, type, member) \
 	((type*)((char*)(ptr) - (size_t)&(((type*)0)->member)))
 
