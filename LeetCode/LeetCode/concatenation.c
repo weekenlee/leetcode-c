@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include <string.h>
 
+//http://ilinuxkernel.com/?p=1062
+//参考自linux内核
 //用于在已知结构体里面成员member和该成员指针ptr（就是地址）和结构体类型type, 返回该成员所在的结构体的指针（就是地址）
 //实现该方法可以分三步：
 //0 算出a.node在a里面的偏移，可以通过将零地址强制转换成struct word_node格式, (struct word_node *)0, 那么((struct word_node *)0)->node 即是偏移大小
