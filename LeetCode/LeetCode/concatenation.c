@@ -121,5 +121,30 @@ static int *findSubstring(char *s, char **words, int wordsSize, int *returnSize)
 	int *fqs = malloc(wordsSize * sizeof(int));
 	for (i = 0; s[i + length] != '\0'; i++) {
 		memset(fqs, 0, wordsSize * sizeof(int));
+		for (j = 0; j < wordsSize; j++) {
+			int index = indexes[i + j * len];
+			if (index<0 || ++fqs[index] > freqs[index]) {
+				break;
+			}
+		}
+		if (j == wordsSize) {
+			results[count++] = i;
+		}
 	}
+
+	*returnSize = count;
+	return results;
+}
+
+int main(int argc, char **argv)
+{
+	int i, count = 0;
+	char *words[2] = { "foo", "bar"};
+	int *results = findSubstring("barfoothefoobarman", words, 2, &count);
+	for (i = 0; i < count; i++) {
+		printf("%d ", results[i]);
+	}
+	printf("\n");
+	getchar();
+	return 0;
 }
