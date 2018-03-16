@@ -93,5 +93,8 @@
     <ClCompile Include="concatenation.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="next_permutation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

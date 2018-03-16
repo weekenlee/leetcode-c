@@ -143,7 +143,7 @@ static int *findSubstring(char *s, char **words, int wordsSize, int *returnSize)
 	return results;
 }
 
-int main(int argc, char **argv)
+int main30(int argc, char **argv)
 {
 	int i, count = 0;
 	char *words[2] = { "foo", "bar"};
