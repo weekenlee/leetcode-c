@@ -99,5 +99,8 @@
     <ClCompile Include="valid_parentheses2.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="rotated_array.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

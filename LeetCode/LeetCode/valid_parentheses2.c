@@ -40,7 +40,7 @@ static int longestValidParentheses(char* s)
 	return max_length;
 }
 
-int main(int argc, char **argv)
+int main32(int argc, char **argv)
 {
 	printf("%d\n", longestValidParentheses(")()())"));
 	getchar();
