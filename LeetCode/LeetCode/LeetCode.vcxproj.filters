@@ -102,5 +102,8 @@
     <ClCompile Include="rotated_array.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="range_search.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

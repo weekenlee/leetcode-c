@@ -67,7 +67,7 @@ static int search(int *nums, int numsSize, int target)
 }
 
 
-int main()
+int main33()
 {
 	int i;
 	int nums[6]= { 4,5,6,1,2,3 };
