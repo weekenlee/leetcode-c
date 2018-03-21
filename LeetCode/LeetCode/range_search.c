@@ -58,7 +58,7 @@ static int* searchRange(int *nums, int numsSize, int target, int* returnSize)
 	return range;
 }
 
-int main()
+int main34()
 {
 	int nums[7] = { 2,4,4,4,6,8,10 };
 	int *count;

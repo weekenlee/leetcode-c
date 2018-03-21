@@ -105,5 +105,8 @@
     <ClCompile Include="range_search.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="insert_position.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

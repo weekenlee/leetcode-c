@@ -122,6 +122,7 @@
     <ClCompile Include="container_with_most_water.c" />
     <ClCompile Include="divide.c" />
     <ClCompile Include="four_sum.c" />
+    <ClCompile Include="insert_position.c" />
     <ClCompile Include="letter_combinations.c" />
     <ClCompile Include="longest_palindromic_substring.c" />
     <ClCompile Include="longest_substring_without_repeat.c" />
