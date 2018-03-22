@@ -145,6 +145,7 @@
     <ClCompile Include="twosum.c" />
     <ClCompile Include="valid_parentheses.c" />
     <ClCompile Include="valid_parentheses2.c" />
+    <ClCompile Include="valid_sudoku.c" />
     <ClCompile Include="zigzag_conversion.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
