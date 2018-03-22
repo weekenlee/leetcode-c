@@ -116,7 +116,7 @@ static bool isValidSudoku(char **board, int boardRowSize, int boardColSize)
 	return false;
 }
 
-nt main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i, j;
 	char *str = argv[1];
