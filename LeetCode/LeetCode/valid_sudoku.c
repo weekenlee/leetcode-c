@@ -110,16 +110,16 @@ static bool isValidSudoku(char **board, int boardRowSize, int boardColSize)
 		//next row
 		if (++j == boardColSize) {
 			j = 0;
-			i++;35
+			i++;
 		}
 	}
 	return false;
 }
 
-int main(int argc, char **argv)
+int main36(int argc, char **argv)
 {
 	int i, j;
-	char *str = argv[1];
+	char *str = "123234234234234234234234234234234234234234234223424242423424243324232456555645669";
 	char **board = malloc(9 * sizeof(char *));
 	for (i = 0; i < 9; i++) {
 		board[i] = malloc(10);
@@ -139,5 +139,6 @@ int main(int argc, char **argv)
 		}
 		printf("\n");
 	}
+	getchar();
 	return;
 }

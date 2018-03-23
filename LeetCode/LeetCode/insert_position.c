@@ -17,7 +17,7 @@ static int searchInsert(int *nums, int numsSize, int target)
 	return high;
 }
 
-int main()
+int main35()
 {
 	int nums[7] = { 2,4,4,4,6,8,10 };
 	int *count;
