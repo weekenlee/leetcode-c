@@ -140,6 +140,7 @@
     <ClCompile Include="roman_numeral.c" />
     <ClCompile Include="rotated_array.c" />
     <ClCompile Include="strstr.c" />
+    <ClCompile Include="sudoku_solver.c" />
     <ClCompile Include="three_sum.c" />
     <ClCompile Include="three_sum_closest.c" />
     <ClCompile Include="twosum.c" />

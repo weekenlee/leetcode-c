@@ -111,5 +111,8 @@
     <ClCompile Include="valid_sudoku.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="sudoku_solver.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
