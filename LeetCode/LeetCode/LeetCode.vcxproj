@@ -120,6 +120,7 @@
     <ClCompile Include="common_prefix.c" />
     <ClCompile Include="concatenation.c" />
     <ClCompile Include="container_with_most_water.c" />
+    <ClCompile Include="count_and_say.c" />
     <ClCompile Include="divide.c" />
     <ClCompile Include="four_sum.c" />
     <ClCompile Include="insert_position.c" />
