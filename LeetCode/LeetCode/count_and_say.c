@@ -65,7 +65,7 @@ static char *countAndSay(int n)
 	return result;
 }
 
-int main(int argc, char **argv)
+int main38(int argc, char **argv)
 {
 	printf("%s\n", countAndSay(5));
 	getchar();

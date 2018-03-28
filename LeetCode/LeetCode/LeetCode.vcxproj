@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="add_two_numbers.c" />
     <ClCompile Include="atoi.c" />
+    <ClCompile Include="combination_sum.c" />
     <ClCompile Include="common_prefix.c" />
     <ClCompile Include="concatenation.c" />
     <ClCompile Include="container_with_most_water.c" />

@@ -117,5 +117,8 @@
     <ClCompile Include="count_and_say.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="combination_sum.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
