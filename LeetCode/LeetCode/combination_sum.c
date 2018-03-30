@@ -25,3 +25,39 @@ static void dfs(int *nums, int size, int start,
 		}
 	}
 }
+
+
+static int** combinationSum(int* candidates, int candidatesSize
+	, int target, int **columnSizes, int* returnSize)
+{
+	int cap = 100;
+	int *stack = malloc(target * sizeof(int));
+	int **results = malloc(cap * sizeof(int*));
+	*columnSizes = malloc(cap * sizeof(int));
+	*returnSize = 0;
+	dfs(candidates, candidatesSize, 0, target, stack, 0, results, *columnSizes, returnSize);
+	return results;
+}
+
+
+int main(int argc, char **argv)
+{
+
+	int i, j, count = 0;
+	int target = 6;
+	int *nums = malloc((5 - 2) * sizeof(int));
+	for (i = 0; i < 5 - 2; i++) {
+		nums[i] = i+2;
+	}
+
+	int *sizes;
+	int **lists = combinationSum(nums, 5 - 2, target, &sizes, &count);
+	for (i = 0; i < count; i++) {
+		for (j = 0; j < sizes[i]; j++) {
+			printf("%d ", lists[i][j]);
+		}
+		printf("\n");
+	}
+	getchar();
+	return 0;
+}
