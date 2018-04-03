@@ -120,5 +120,8 @@
     <ClCompile Include="combination_sum.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="missing_positive.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

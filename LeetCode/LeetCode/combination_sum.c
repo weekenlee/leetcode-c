@@ -89,7 +89,7 @@ static int ** combinationSum2(int *candidates, int candidatesSize,
 	return results;
 }
 
-int main(int argc, char **argv)
+int main3940(int argc, char **argv)
 {
 
 	int i, j, count = 0;
