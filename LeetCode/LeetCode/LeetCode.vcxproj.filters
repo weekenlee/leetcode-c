@@ -123,5 +123,8 @@
     <ClCompile Include="missing_positive.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="trap_water.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

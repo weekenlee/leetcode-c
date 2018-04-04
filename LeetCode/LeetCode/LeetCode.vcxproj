@@ -146,6 +146,7 @@
     <ClCompile Include="sudoku_solver.c" />
     <ClCompile Include="three_sum.c" />
     <ClCompile Include="three_sum_closest.c" />
+    <ClCompile Include="trap_water.c" />
     <ClCompile Include="twosum.c" />
     <ClCompile Include="valid_parentheses.c" />
     <ClCompile Include="valid_parentheses2.c" />
