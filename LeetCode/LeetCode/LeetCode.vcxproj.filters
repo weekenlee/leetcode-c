@@ -129,5 +129,8 @@
     <ClCompile Include="multiply_strings.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="wildcard_matching.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

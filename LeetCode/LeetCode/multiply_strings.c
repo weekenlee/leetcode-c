@@ -58,7 +58,7 @@ static char * multiply(char* num1, char *num2)
 	return result;
 }
 
-int main(int argc, char **argv)
+int main43(int argc, char **argv)
 {
 	char *num1 = malloc(4*sizeof(char));
 	num1[0] = '1';
