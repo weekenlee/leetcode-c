@@ -44,7 +44,7 @@ static bool isMatch(char *s, char *p)
 }
 
 
-int main(int argc, char **argv)
+int main44(int argc, char **argv)
 {
 	printf("%s\n", isMatch("abba", "ab?b") ? "true" : "false");
 	getchar();
