@@ -22,7 +22,7 @@ static int jump(int* nums, int numsSize)
 	return steps;
 }
 
-int main(int argc, char **argv)
+int main45(int argc, char **argv)
 {
 	int nums[5] = { 2,3,1,1,4 };
 	int count = 5;
