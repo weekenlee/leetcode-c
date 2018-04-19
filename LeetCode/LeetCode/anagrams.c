@@ -35,6 +35,7 @@ static char *** groupAnagrams(char ** strs, int strSize, int** columnSize, int* 
         words[i] = malloc(len+1);
         strcpy(words[i], strs[i]);
         qsort(words[i], len, sizeof(char), compare);
+        printf("%s\n",words[i]);
         int hash = BKDRHash(words[i], hash_size);
         for(j=hash;ht[j].num>0&&strcmp(ht[j].word, words[i]);j= ++j%hash_size) {}
         if(ht[j].num == 0) {
@@ -70,7 +71,7 @@ int main(int argc, char **argv){
     char ***lists=groupAnagrams(argv+1, argc-1, &column_sizes,&count);
     for(i=0;i<count;i++) {
     	for(j=0;j<column_sizes[i];j++) {
-    		printf("%s \n", lists[i][j]);
+    		printf("%s ", lists[i][j]);
     	}
     	printf("\n");
     }
