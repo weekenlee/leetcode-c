@@ -24,4 +24,7 @@ def solveNQueens(n):
     return ans
 
 
-print solveNQueens(8)
+for i in solveNQueens(8):
+    for ii in i:
+        print ii
+    print ""
