@@ -41,4 +41,19 @@ static char **solutions(int *stack, int n)
 	int row, col;
 	char **solution = malloc(n*sizeof(char *));
 
+	for (row = 0; row < n; row++)
+	{
+		char *line = malloc(n+1);
+		for(col =0; col <n; col++) {
+			line[col] = col ==stack[row]?'Q':'.';
+		}
+		line[n] = '\0';
+		solution[row] = line;
+	}
+	return solution;
+
+}
+
+char** solveNQueens(int n , int *returnSize) {
+
 }
