@@ -78,7 +78,20 @@ static struct Interval* insert(struct Interval * intervals, int intervalsSize,
 			p[merge_start] = newInterval;
 			memcpy(p + merge_start + 1, intervals+merge_start,(intervalsSize- merge_start)*sizeof(*p));
 		}else{
-			
+			count = intervalsSize;
+			p = malloc(count * sizeof(*p));
+			memcpy(p, intervals, count * sizeof(*p));
+			if (start0 < 0 && start1 %2 ==0 )
+			{
+				p[merge_start].start = newInterval.start;
+			}
+			if (end0 < 0 && end1 % 2 == 0) {
+                p[merge_end].end = newInterval.end;
+			}
 		}
+	}else {
+		count = intervalsSize - (merge_end - merge_start);
+		p = malloc(count * sizeof(*p));
+		memcpy(p, intervals,merge_start*sizeof(*p));
 	}
 }
