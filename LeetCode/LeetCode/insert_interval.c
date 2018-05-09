@@ -5,7 +5,7 @@
 struct Interval {
 	int start;
 	int end;
-}
+};
 
 static int binary_search(int *nums, int size, int target)
 {
@@ -27,11 +27,12 @@ static int binary_search(int *nums, int size, int target)
 }
 
 static struct Interval* insert(struct Interval* intervals,
-								int intervalSize, 
+								int intervalsSize, 
 								struct Interval newInterval, 
 								int *returnSize)
 {
-	if (intervalSize == 0)
+	struct Interval *p;
+	if (intervalsSize == 0)
 	{
 		p = malloc(sizeof(*p));
 		p->start = newInterval.start;
@@ -41,8 +42,8 @@ static struct Interval* insert(struct Interval* intervals,
 	}
 
 	int i, count;
-	int *nums = malloc(2*intervalSize*sizeof(int));
-	for (i = 0; i < intervalSize; ++i)
+	int *nums = malloc(2*intervalsSize*sizeof(int));
+	for (i = 0; i < intervalsSize; ++i)
 	{
 		nums[i*2] = intervals[i].start;
 		nums[i*2 + 1] = intervals[i].end;
