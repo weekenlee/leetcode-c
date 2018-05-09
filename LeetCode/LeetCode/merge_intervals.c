@@ -33,7 +33,7 @@ static struct Interval* insert(struct Interval * intervals, int intervalsSize,
 {
 	struct Interval *p;
 	if (intervalsSize == 0) {	
-		p = malloc(size(*p));
+		p = malloc(sizeof(*p));
 		p->start = newInterval.start;
 		p->end = newInterval.end;
 		*returnSize = 1;
@@ -93,5 +93,59 @@ static struct Interval* insert(struct Interval * intervals, int intervalsSize,
 		count = intervalsSize - (merge_end - merge_start);
 		p = malloc(count * sizeof(*p));
 		memcpy(p, intervals,merge_start*sizeof(*p));
-	}
+		memcpy(p + merge_start, intervals + merge_end,(intervalsSize - merge_end) * sizeof(*p));
+        if (start0 < 0 && start1 % 2 == 0) {
+            p[merge_start].start = newInterval.start;
+        } else {
+            p[merge_start].start = intervals[merge_start].start;
+        }
+        if (end0 < 0 && end1 % 2 == 0) {
+            p[merge_start].end = newInterval.end;
+        } else {
+            p[merge_start].end = intervals[merge_end].end;
+        }
+    }
+
+    free(nums);
+    free(intervals);
+    *returnSize = count;
+    return p;
+}
+
+/**
+ *  * Return an array of size *returnSize.
+ *   * Note: The returned array must be malloced, assume caller calls free().
+ *    */
+struct Interval* merge(struct Interval* intervals, int intervalsSize, int* returnSize) {
+    int i, count = 0;
+    struct Interval *p = NULL;
+    for (i = 0; i < intervalsSize; i++) {
+        p = insert(p, count, intervals[i], &count);
+    }
+    *returnSize = count;
+    return p;
+}
+
+int main(int argc, char **argv)
+{
+    if (argc < 1|| argc % 2 == 0) {
+        fprintf(stderr, "Usage: ./test s0 e0 s1 e1...");
+        exit(-1);
+    }
+
+    int i, count = 0;
+    struct Interval *intervals = malloc((argc - 1) / 2 * sizeof(struct Interval));
+    struct Interval *p = intervals;
+    for (i = 1; i < argc; i += 2) {
+        p->start = atoi(argv[i]);
+        p->end = atoi(argv[i + 1]);
+        p++;
+    }
+
+    struct Interval *q = merge(intervals, (argc - 1) / 2, &count);
+    for (i = 0; i < count; i++) {
+        printf("[%d, %d]\n", q->start, q->end);
+        q++;
+    }
+    return 0;
 }
