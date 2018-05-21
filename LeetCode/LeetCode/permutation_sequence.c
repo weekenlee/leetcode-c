@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+int test(){
+    return 0;
+}
 static int factorial(int n )
 {
 	if(n == 0) {
