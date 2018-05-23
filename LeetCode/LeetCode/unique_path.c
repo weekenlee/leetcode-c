@@ -19,7 +19,6 @@ static int uniquePaths(int m, int n) {
 }
 
 int main(int argc, char **argv) {
-
     printf("%d\n", uniquePaths(atoi(argv[1]), atoi(argv[2])));
     return 0;
 }
