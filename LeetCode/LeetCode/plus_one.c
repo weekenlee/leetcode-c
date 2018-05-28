@@ -7,7 +7,7 @@ static int *plusOne(int * digits , int digitsSize, int *returnSize)
     int i, j, len = 0, carry = 1;
     int *result = malloc((digitsSize + 1)*sizeof(int));
     for(i = digitsSize - 1 ; i >= 0||carry; i--){
-        int n = digits[i] + carry;
+        int n = i>=0?digits[i] + carry:carry;
         result[len++] = n % 10;
         carry = n / 10;
     }
@@ -31,6 +31,7 @@ int main(int argc, char** argv)
 
     int len = 0;
     printf("%d, %d", count, len);
+    printf("\n");
     int *res = plusOne(digits, count, &len);
     printf("%d, %d", count, len);
     printf("\n");
