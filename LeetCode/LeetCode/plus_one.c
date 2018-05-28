@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-static int pulsOne(int * digits , int digitsSize, int *returnSize)
+static int *plusOne(int * digits , int digitsSize, int *returnSize)
 {
     int i, j, len = 0, carry = 1;
     int *result = malloc((digitsSize + 1)*sizeof(int));
@@ -14,11 +14,11 @@ static int pulsOne(int * digits , int digitsSize, int *returnSize)
 
     for(i = 0, j = len - 1; i < j; i++, j--){
         int tmp = result[i];
-        result[i] = result=[j];
+        result[i] = result[j];
         result[j] = tmp;
     }
 
-    *resultSize = len;
+    *returnSize = len;
     return result;
 }
 int main(int argc, char** argv)
@@ -30,7 +30,10 @@ int main(int argc, char** argv)
     }
 
     int len = 0;
+    printf("%d, %d", count, len);
     int *res = plusOne(digits, count, &len);
+    printf("%d, %d", count, len);
+    printf("\n");
     for(i = 0; i< len; i++){
         printf("%c", res[i] + '0');
     }
