@@ -42,5 +42,3 @@ int main(int argc, char** argv) {
     printf("%s\n", isNumber(argv[1])?"true":"false");
     return 0;
 }
-
-
