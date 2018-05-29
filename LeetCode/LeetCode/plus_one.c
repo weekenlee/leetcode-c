@@ -21,6 +21,7 @@ static int *plusOne(int * digits , int digitsSize, int *returnSize)
     *returnSize = len;
     return result;
 }
+
 int main(int argc, char** argv)
 {
     int i, count = strlen(argv[1]);
