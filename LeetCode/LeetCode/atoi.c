@@ -3,7 +3,7 @@
 #include <limits.h>
 
 
-/*
+
 int main()
 {
 	char *alpha, *s;
@@ -47,4 +47,4 @@ int main()
 
 	char c = getchar();
 	return 0;
-}*/
+}
