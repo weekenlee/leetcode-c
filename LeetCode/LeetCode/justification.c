@@ -43,7 +43,6 @@ fullJustify(char** words,
     int i, j, k, cap = 100, count = 0;
     char **lines = malloc(cap *sizeof(char *));
     char *buf = malloc(cap *(maxWidth + 1));
-
     for(i = 0; i < cap; i++) {
         lines[i] = buf + i * (maxWidth +1);
     }
@@ -110,6 +109,7 @@ int main(int argc, char** argv)
 {
     int i, count;
 
+    //a.exe/a.out 16 this is an example of text justification
     char** lines = fullJustify(argv + 2, argc - 2, atoi(argv[1]), &count);
     for (i = 0; i < count; i++) {
         printf("%s\n", lines[i]);
