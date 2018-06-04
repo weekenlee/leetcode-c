@@ -41,11 +41,11 @@ static int threeSumClosest(int *nums, int numSize, int target)
 	return min_diff + target;
 }
 
-//int main(void)
-//{
-//	int i, target = 1;
-//	int nums[] = { -1,2,1,-4 };
-//	printf("%d\n", threeSumClosest(nums, sizeof(nums) / sizeof(nums[0]), target));
-//	char c = getchar();
-//	return 0;
-//}
+int main(void)
+{
+	int i, target = 1;
+	int nums[] = { -1,2,1,-4 };
+	printf("%d\n", threeSumClosest(nums, sizeof(nums) / sizeof(nums[0]), target));
+	char c = getchar();
+	return 0;
+}
