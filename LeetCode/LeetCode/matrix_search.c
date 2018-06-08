@@ -78,5 +78,5 @@ int main(int argc, char **argv)
     mat[2][2] = 34;
     mat[2][3] = 50;
     printf("%s\n", searchMatrix(mat, row, col, atoi(argv[1])) ? "true" : "false");
-return 0;
+    return 0;
 }
