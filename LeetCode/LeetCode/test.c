@@ -10,7 +10,7 @@ void vga_putchar(int c, int color, int x, int y)
 
 int main()
 {
-	//vga_putchar('a', 0x07, 0, 0);
+//vga_putchar('a', 0x07, 0, 0);
 
   char *src = (char *)0xB8000000L;
   *src = 'M';
