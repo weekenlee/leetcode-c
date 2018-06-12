@@ -9,5 +9,8 @@ dfs(int n, int k, int *stack, int len, bool *used, int *col_sizes, int **result,
     int i;
     if(len == k) {
         col_sizes[*count] = k;
+        results[*count] = malloc(k * sizeof(int));
+        memcpy(results[*count], stack, k * sizeof(int));
+        (*count)++;
     }
 }
