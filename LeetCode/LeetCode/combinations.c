@@ -4,7 +4,7 @@
 #include<string.h>
 
 static void 
-dfs(int n, int k, int *stack, int len, bool *used, int *col_sizes, int **result, int *count)
+dfs(int n, int k, int start, int *stack, int len, bool *used, int *col_sizes, int **results, int *count)
 {
     int i;
     if(len == k) {
@@ -17,6 +17,8 @@ dfs(int n, int k, int *stack, int len, bool *used, int *col_sizes, int **result,
             if(!used[i]) {
                 stack[len] = i;
                 used[i] = true;
+                dfs(n,k,i+1,stack, len+1, used, col_sizes, results,count);
+                used[i] = false;
             }
         }
     }
@@ -31,4 +33,22 @@ combine(int n, int k, int** columnSizes, int* returnSize)
     int *stack = malloc(k * sizeof(int));
     bool *used = malloc((n+1)*sizeof(bool));
     memset(used, false, n+1);
+    *columnSizes = malloc(capacity * sizeof(int));
+    dfs(n, k, 1, stack, 0, used, *columnSizes, results, &count);
+    *returnSize = count;
+    return results;
+}
+
+int main(int argc, char *argv[])
+{
+    int i, j, *col_sizes, count = 0;
+    int **lists  = combine(atoi(argv[1]), atoi(argv[2]), &col_sizes, &count);
+    for(i = 0; i < count; i++) {
+        for(j = 0; j < col_sizes[i]; j++) {
+            printf("%d ", lists[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
 }
