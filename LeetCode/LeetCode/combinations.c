@@ -12,5 +12,12 @@ dfs(int n, int k, int *stack, int len, bool *used, int *col_sizes, int **result,
         results[*count] = malloc(k * sizeof(int));
         memcpy(results[*count], stack, k * sizeof(int));
         (*count)++;
+    }else{
+        for(i = start; i <= n; i++) {
+            if(!used[i]) {
+                stack[len] = i;
+                used[i] = true;
+            }
+        }
     }
 }
