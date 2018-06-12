@@ -21,3 +21,14 @@ dfs(int n, int k, int *stack, int len, bool *used, int *col_sizes, int **result,
         }
     }
 }
+
+int**
+combine(int n, int k, int** columnSizes, int* returnSize)
+{
+    int capacity = 10000;
+    int count = 0;
+    int **results = malloc(capacity * sizeof(int *));
+    int *stack = malloc(k * sizeof(int));
+    bool *used = malloc((n+1)*sizeof(bool));
+    memset(used, false, n+1);
+}
