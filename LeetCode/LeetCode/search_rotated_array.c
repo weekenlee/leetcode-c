@@ -39,5 +39,7 @@ static bool search(int *nums, int numsSize, int target)
 
     if(i ==0){
         return binary_search(nums, numsSize, target) >= 0;
-    } else if(target )
+    } else if(target >= nums[0]) {
+        return binary_search(nums, i, target) >= 0;
+    }
 }
