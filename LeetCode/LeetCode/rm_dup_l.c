@@ -28,6 +28,19 @@ struct ListNode * deleteDuplicates(struct ListNode *head) {
     return dummy.next;
 }
 
+struct ListNode * deleteDuplicates2(struct ListNode *head) {
+    struct ListNode *p, *next;
+    p = next = head;
+    while(p!=NULL) {
+        while(next!=NULL && next->val == p->val) {
+            next = next -> next;
+        }
+        p->next = next;
+        p = next;
+    }
+    return head;
+}
+
 int main(int argc, char **argv)
 {
     int i;
@@ -47,7 +60,8 @@ int main(int argc, char **argv)
         }
     }
 
-    p = deleteDuplicates(head);
+    //p = deleteDuplicates(head);
+    p = deleteDuplicates2(head);
     while(p!=NULL) {
         printf("%d  ", p->val);
         p = p->next;
