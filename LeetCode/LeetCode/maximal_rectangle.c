@@ -61,9 +61,8 @@ int main(int argc, char **argv)
        fprintf(stderr, "Usage: ./test row1 row2...\n");
        exit(-1);
    }
-   int i, j;
+   int i;
    int row_size = argc - 1;
-   int col_size = strlen(argv[1]);
    for (i = 0; i < row_size; i++) {
        printf("%s\n", argv[i + 1]);
    }
