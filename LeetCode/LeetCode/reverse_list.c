@@ -43,7 +43,7 @@ int main(int argc, char ** argv)
     struct ListNode *p;
 
     for (i = 0; i < count; ++i) {
-        p = malloc(sizeof(*p));
+        p = (struct ListNode*)malloc(sizeof(*p));
         p->val = atoi(argv[i+3]);
         p->next = NULL;
         prev->next = p;
