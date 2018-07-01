@@ -19,8 +19,13 @@ static bool valid(char *ip, int len)
 
 #define WIDTH 4
 
-static void dfs(char *s, int start, char *stack, int num,
-        char **results, int *count)
+static void
+dfs(char *s,
+    int start,
+    char *stack,
+    int num,
+    char **results,
+    int *count)
 {
     int i , j;
     if (num == 4) {
