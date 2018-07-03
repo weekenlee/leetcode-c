@@ -37,7 +37,7 @@ dfs(int low, int high, int *count)
                 roots = realloc(roots, capacity * sizeof(struct TreeNode));
             }
             for(j = 0; j < left_cnt; j++) {
-                for(k = 0; i < right_cnt; k++) {
+                for(k = 0; k < right_cnt; k++) {
                     roots[*count].val = i;
                     roots[*count].left = left_subs == NULL ? NULL:&left_subs[j];
                     roots[*count].right = right_subs == NULL ? NULL:&right_subs[k];
@@ -83,7 +83,7 @@ dump(struct TreeNode *node)
 int main(int argc, char **argv)
 {
     int i,count = 0;
-    struct TreeNode **results = generateTrees(argv[1], &count);
+    struct TreeNode **results = generateTrees(atoi(argv[1]), &count);
     for(i = 0; i< count; i++) {
         dump(results[i]);
         printf("\n");
