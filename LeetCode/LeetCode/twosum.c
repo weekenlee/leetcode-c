@@ -14,15 +14,14 @@ static int compare(const void* a, const void* b)
 static int* twosum(int *nums, int numsize, int target)
 {
 	int i, j;
-	struct object *objs = malloc(numsize * sizeof(*objs));
+	struct object *objs = (struct object *)malloc(numsize * sizeof(*objs));
 	for (i = 0; i < numsize; i++) {
 		objs[i].val = nums[i];
 		objs[i].index = i;
 	}
 	qsort(objs, numsize, sizeof(*objs), compare);
 
-	int count = 0;
-	int *results = malloc(2 * sizeof(int));
+	int *results = (int *)malloc(2 * sizeof(int));
 	i = 0;
 	j = numsize - 1;
 	while (i < j) {
@@ -42,12 +41,8 @@ static int* twosum(int *nums, int numsize, int target)
 	return NULL;
 }
 
-/*int main(void)
+int main(void)
 {
-	//int nums[] = {-1, -2, -3, -4, -5};
-	//int target = -8;
-	//int nums[] = {0,4,3,0};
-	//int target = 0;
 	int nums[] = { 3, 2, 3 };
 	int count = sizeof(nums) / sizeof(*nums);
 	int target = 6;
@@ -58,8 +53,5 @@ static int* twosum(int *nums, int numsize, int target)
 	else {
 		printf("Not found\n");
 	}
-
-	char c = getchar();
 	return 0;
 }
-*/
