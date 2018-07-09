@@ -5,7 +5,7 @@
 #define BST_MAX_LEVEL 800
 
 #define container_of(ptr, type, member) \
-    ((type * )((char *)(ptr)- (sizer_t)&(((type *)0)->member)))
+    ((type * )((char *)(ptr)- (size_t)&(((type *)0)->member)))
 
 #define list_entry(ptr, type, member) \
     container_of(ptr, type, member)
@@ -83,3 +83,59 @@ static struct bfs_node *node_new(struct list_head *free_list,struct
     new->node = node;
     return new;
 }
+
+static void queue(struct list_head *parents, 
+        struct list_head *children,
+        struct list_head *free_list,
+        int **results,
+        int *col_sizes, 
+        int level)
+{
+    struct list_head *p, *n;
+    list_for_each(p, parents) {
+        struct bfs_node *new;
+        struct bfs_node *parent = list_entry(p, struct bfs_node, link);
+        if(parent->node->left != NULL) {
+            new = node_new(free_list, parent->node->left);
+            list_add_tail(&new->link, children);
+        }
+        if(parent->node->right != NULL) {
+            new = node_new(free_list, parent->node->right);
+            list_add_tail(&new->link, children); 
+        }
+        col_sizes[level]++;
+    }
+
+    int i = 0;
+    results[level] = malloc(col_sizes[level]*sizeof(int));
+    list_for_each_safe(p, n, parents) {
+        struct bfs_node *parent = list_entry(p, struct bfs_node, link);
+        results[level][i++] = parent->node->val;
+        list_del(p);
+        list_add(p, free_list);
+    }
+}
+
+static int** levelOrder(struct TreeNode *root, int** columnSizes, int *returnSize) 
+{
+    if(root == NULL) {
+        *returnSize = 0;
+        return NULL;
+    }
+
+    struct list_head free_list;
+    struct list_head q0;
+    struct list_head q1;
+    INIT_LIST_HEAD(&free_list);
+    INIT_LIST_HEAD(&q0);
+    INIT_LIST_HEAD(&q1);
+
+    int **results = malloc(BST_MAX_LEVEL*sizeof(int*));
+    *columnSizes = malloc(BST_MAX_LEVEL*sizeof(int));
+    memset(*columnSizes, 0, BST_MAX_LEVEL*sizeof(int));
+
+    int level = 0;
+    struct bfs_node *new = node_new(&free_list, root);
+    list_add_tail(&new->link, &q0);
+}
+
