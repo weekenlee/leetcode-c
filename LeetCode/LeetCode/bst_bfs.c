@@ -137,5 +137,55 @@ static int** levelOrder(struct TreeNode *root, int** columnSizes, int *returnSiz
     int level = 0;
     struct bfs_node *new = node_new(&free_list, root);
     list_add_tail(&new->link, &q0);
+
+    while(!list_empty(&q0) || !list_empty(&q1)) {
+        if(level & 0x1) {
+            queue(&q1, &q0, &free_list, results, *columnSizes, level);
+        }else {
+            queue(&q0, &q1, &free_list, results, *columnSizes, level);
+        }
+        level++;
+    }
+    *returnSize = level;
+    return results;
 }
 
+int main(void) {
+    struct TreeNode root;
+    root.val = 3;
+
+    struct TreeNode node1[2];
+    node1[0].val = 9;
+    node1[1].val = 20;
+
+    struct TreeNode node2[4];
+    node2[2].val = 15;
+    node2[3].val = 7;
+
+    root.left = &node1[0];
+    root.right = &node1[0];
+
+    node1[0].left = NULL;
+    node1[0].right = NULL;
+    node1[1].left = &node2[2];
+    node1[1].right = &node2[3];
+
+    node2[0].left = NULL;
+    node2[0].right = NULL;
+    node2[1].left = NULL;
+    node2[1].right = NULL;
+    node2[2].left = NULL;
+    node2[2].right = NULL;
+    node2[3].left = NULL;
+    node2[1].right = NULL;
+
+    int i, j, count = 0, *col_sizes;
+    int **lists = levelOrder(&root, &col_sizes, &count);
+    for(i = 0; i<count; i++) {
+        for(j = 0; j<col_sizes[i]; j++) {
+            printf("%d ", lists[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
