@@ -71,6 +71,5 @@ int main(int argc, char **argv)
 
     recoverTree(&root);
     printf("%d %d %d\n", root.val, left.val, right.val);
-    return 0;
 }
 
