@@ -163,7 +163,7 @@ int main(void) {
     node2[3].val = 7;
 
     root.left = &node1[0];
-    root.right = &node1[0];
+    root.right = &node1[1];
 
     node1[0].left = NULL;
     node1[0].right = NULL;
@@ -177,7 +177,7 @@ int main(void) {
     node2[2].left = NULL;
     node2[2].right = NULL;
     node2[3].left = NULL;
-    node2[1].right = NULL;
+    node2[3].right = NULL;
 
     int i, j, count = 0, *col_sizes;
     int **lists = levelOrder(&root, &col_sizes, &count);
@@ -189,3 +189,4 @@ int main(void) {
     }
     return 0;
 }
+
