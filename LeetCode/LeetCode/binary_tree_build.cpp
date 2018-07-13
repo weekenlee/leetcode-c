@@ -43,8 +43,8 @@ struct Solution {
 void PrintHelper(TreeNode *root)
 {
     if(root != NULL) {
-        printf("%d ", root->val);
         PrintHelper(root->left);
+        printf("%d \n", root->val);
         PrintHelper(root->right);
     }
 }
