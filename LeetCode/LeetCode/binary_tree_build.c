@@ -48,3 +48,20 @@ static inline void hlist_del(struct hlist_node *n)
         next->pprev = pprev;
     }
 }
+
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
+
+struct order_node {
+    struct hlist_node node;
+    int val;
+    int index;
+};
+
+static int find(int num, int size, struct hlist_head *heads)
+{
+    struct hlist_node *p; 
+}
