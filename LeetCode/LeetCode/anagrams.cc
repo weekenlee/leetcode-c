@@ -27,7 +27,7 @@ class Solution {
                     group.emplace_back(str);
                 }
 
-                //sort(group.begin(), group.end());
+                sort(group.begin(), group.end());
                 anagrams.emplace_back(move(group));
             }
 
