@@ -47,6 +47,6 @@ class solution {
 
 int main(void) {
     solution s;
-    std::cout<<s.myAtoi("101")<<std::endl;
+    std::cout<<s.myAtoi(" -101")<<std::endl;
     return 0;
 }
