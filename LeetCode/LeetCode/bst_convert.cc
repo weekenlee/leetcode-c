@@ -36,8 +36,6 @@ void PrintHelper(TreeNode *root)
     }
 }
 
-
-
 int main(void) 
 {
     Solution s;
