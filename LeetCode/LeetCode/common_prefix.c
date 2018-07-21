@@ -5,7 +5,7 @@
 static char* longestCommonPrefix(char** strs, int strSize)
 {
 	int i, count = 0;
-	char *result = malloc(100);
+	char *result = (char *)malloc(100);
 	while (strSize > 0) {
 		char c = strs[0][count];
 		for(i=1;i<strSize;i++)  {
@@ -27,6 +27,5 @@ int main(int argc, char **argv)
 {
 	char *s[] = { "abcdef", "abc", "abc"};
 	printf("%s\n", longestCommonPrefix(s, 3));
-	char c = getchar();
 	return 0;
 }
