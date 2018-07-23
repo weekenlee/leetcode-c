@@ -23,7 +23,9 @@ class Solution {
             unordered_map<string, int> lookup;
             for(const auto& word : words) {
                 ++lookup[word];
+                std::cout<<word<<" : "<<lookup[word]<<std::endl;
             }
+
 
             for(int i = 0; i < k; ++i) {
                 int left = i, count = 0;
@@ -63,6 +65,17 @@ class Solution {
         }
 };
 
+
+class Solution2 {
+    public:
+        vector<int> findSubstring(string s, vector<string>& words) {
+            const auto word_length = words.front().length();
+            const auto cat_length = word_length* words.size();
+            vector<int> result;
+
+
+        }
+};
 int main(void) 
 {
     vector<string> vs = {
