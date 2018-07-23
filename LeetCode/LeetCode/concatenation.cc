@@ -73,7 +73,33 @@ class Solution2 {
             const auto cat_length = word_length* words.size();
             vector<int> result;
 
+            if(s.length() < cat_length) {
+                return result;
+            }
 
+            unordered_map<string, int> wordCount;
+            for(const auto &word : words) {
+                ++wordCount[word];
+            }
+
+            for(auto it = s.begin(); it != prev(s.end(), cat_length-1); ++it) {
+                unordered_map<string, int> unused(wordCount);
+                for(auto jt = it; jt != next(it, cat_length); jt += word_length) {
+                    auto pos = unused.find(string(jt, next(jt, word_length)));
+                    if(pos == unused.end()) {
+                        break;
+                    }
+                    if(--pos->second == 0) {
+                        unused.erase(pos);
+                    }
+                }
+
+                if(unused.empty()) {
+                    result.emplace_back(distance(s.begin(), it));
+                }
+            }
+
+            return result;
         }
 };
 int main(void) 
@@ -83,8 +109,14 @@ int main(void)
     };
 
     Solution s;
+    Solution2 s2;
     vector<int> result = s.findSubstring("barfoothefoobarman", vs);
+    vector<int> result2 = s2.findSubstring("barfoothefoobarman", vs);
     for (auto i : result) {
+        std::cout<< i << " ";
+    }
+    std::cout<<std::endl;
+     for (auto i : result2) {
         std::cout<< i << " ";
     }
     std::cout<<std::endl;
