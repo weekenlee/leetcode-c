@@ -36,7 +36,7 @@ int divide(int dividend, int divisor)
 }
 
 
-int main29(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	
 	printf("%d\n", divide(15, 3));
