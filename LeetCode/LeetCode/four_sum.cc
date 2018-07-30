@@ -1,7 +1,13 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<unordered_map>
+#include<utility>
+
 using std::vector;
+using std::pair;
+using std::make_pair;
+using std::unordered_multimap;
 
 class Solution {
     public:
@@ -46,3 +52,60 @@ class Solution {
             return res;
         }
 };
+
+class Solution2 {
+    public:
+        vector<vector<int>> fourSum(vector<int> &num, int target) {
+            vector<vector<int>> ans;
+            if(num.size() < 4) {
+                return ans;
+            }
+
+            sort(num.begin(), num.end());
+            unordered_multimap<int, pair<int, int>> cache;
+            
+            for(int i = 0; i < num.size(); ++i) {
+                for(int j = i + 1; j < num.size(); ++j)  {
+                    cache.emplace(num[i] + num[j], make_pair(i, j));
+                }
+            }
+
+            for(auto i = cache.begin(); i != cache.end(); ++i) {
+                auto a = i->second.first;
+                auto b = i->second.second;
+                auto range = cache.equal_range(target - i->first);
+                for(auto j = range.first; j != range.second; ++j) {
+                    auto c = j->second.first;
+                    auto d = j->second.second;
+                    if(b < c) {
+                        ans.push_back({num[a], num[b], num[c], num[d]});
+                    }
+                }
+            }
+            sort(ans.begin(), ans.end());
+            ans.erase(unique(ans.begin(), ans.end()), ans.end());
+            return ans;
+        }
+};
+
+int main(void) 
+{
+    Solution s;
+    Solution2 s2;
+    vector<int> v{1,2,3,4,5,6};
+    int target = 10;
+    vector<vector<int>> res=s.fourSum(v, target);
+    for(auto r : res) {
+        for (auto rr : r) {
+            std::cout<< rr<< " ";
+        }
+        std::cout<<std::endl;
+    }
+    res=s2.fourSum(v, target);
+    for(auto r : res) {
+        for (auto rr : r) {
+            std::cout<< rr<< " ";
+        }
+        std::cout<<std::endl;
+    }
+}
