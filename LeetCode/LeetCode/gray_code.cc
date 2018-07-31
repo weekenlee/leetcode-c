@@ -15,15 +15,31 @@ class Solution {
         }
 };
 
+class Solution2 {
+    public:
+        vector<int> grayCode(int n) {
+            vector<int> result;
+            for(int i = 0; i < 1 << n; ++i) {
+                result.emplace_back(i >> 1^i);
+            }
+            return result;
+        }
+};
+
 std::ostream& operator<<(std::ostream& o, std::vector<int> const& v) 
 {
-    for(auto i = v.begin(), end = v.end(); i != end; i++) {
+    for(auto i = v.begin(), end = v.end(); i != end; ++i) {
         o << *i <<' ';
     }
+    return o;
 }
 
 int main(void) 
 {
     Solution s;
-    std::cout<<s.grayCode(5)<<std::endl;
+    Solution2 s2;
+    auto v = s.grayCode(5);
+    auto v2 = s2.grayCode(5);
+    std::cout<<v<<std::endl;
+    std::cout<<v2<<std::endl;
 }
