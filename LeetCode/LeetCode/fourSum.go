@@ -54,8 +54,6 @@ func next(nums []int, l, r int) (int, int) {
 	return l, r
 }
 
-
-
 func main() {
 	nums:= []int{1,2,3,4,5,6}
 	target := 10 
