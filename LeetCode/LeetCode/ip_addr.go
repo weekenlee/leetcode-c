@@ -76,4 +76,3 @@ func isOK(s string ) bool {
 func main() {
 	fmt.Println(restoreIpAddresses("25525511135"))
 }
-	
