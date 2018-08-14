@@ -57,7 +57,6 @@ std::ostream& operator<<(std::ostream& o, std::vector<string> const& v)
     return o;
 }
 
-
 int main() 
 {
     Solution s;
