@@ -6,6 +6,7 @@
 using std::vector;
 using std::stack;
 using std::max;
+using std::min;
 
 class Solution {
     public:
@@ -46,8 +47,49 @@ class Solution {
         }
 };
 
+class Solution2 {
+    public:
+        int maximalRectangle(vector<vector<char>> &matrix) {
+            if (matrix.empty()) {
+                return 0;
+            }
+
+            const int m = matrix.size();
+            const int n = matrix.front().size();
+            int res = 0;
+            vector<int> H(n, 0);
+            vector<int> L(n, 0);
+            vector<int> R(n, 0);
+
+            for (int i = 0; i < m; ++ i) {
+                int left = 0, right = n;
+                for( int j = 0; j < n; j++ ) {
+                    if (matrix[i][j] == '1') {
+                        ++H[j];
+                        L[j] = max(L[j], left);
+                    } else {
+                        left = j + 1;
+                        H[j] = L[j] = 0;
+                        R[j] = n;
+                    }
+                }
+
+                for (int j = n - 1; j >= 0; --j) {
+                    if (matrix[i][j] == '1') {
+                        R[j] = min(R[j], right);
+                        res = max(res,H[j] * (R[j] - L[j]));
+                    }else {
+                        right = j;
+                    }
+                }
+            }
+            return res;
+        }
+};
+
 int main(void) {
     Solution s;
+    Solution2 s2;
     vector<vector<char>> m = {
         {
             '1','0','1','0','0'
@@ -63,5 +105,6 @@ int main(void) {
         },
     };
     std::cout<<s.maximalRectangle(m)<<std::endl;
+    std::cout<<s2.maximalRectangle(m)<<std::endl;
     return 0;
 }
