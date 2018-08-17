@@ -8,6 +8,7 @@ using std::stack;
 using std::max;
 using std::min;
 
+
 class Solution {
     public:
         int maximalRectangle(vector<vector<char>> &matrix) {
@@ -25,6 +26,7 @@ class Solution {
             }
             return res;
         }
+
 
     private:
         int largestRectangleArea(const vector<int> &height) {
