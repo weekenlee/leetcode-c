@@ -49,5 +49,8 @@ class Solution {
 int main(void) 
 {
     Solution s;
-
+	vector<int> a = { 1, 2, 5, 6, 8, 9, 10 };
+	vector<int> b = { 13, 17, 30, 45, 50 };
+    std::cout<<s.findMedianSortedArrays(a, b) <<std::endl;
+    return 0;
 }
