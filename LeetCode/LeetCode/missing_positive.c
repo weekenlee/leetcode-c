@@ -31,11 +31,10 @@ static int firstMissingPositive(int *nums, int numsSize)
 	return i + 1;
 }
 
-int main41(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i, count = 6;
 	int nums[6] = { 1,2,3,4,5,7 };
 	printf("%d\n", firstMissingPositive(nums, count));
-	getchar();
 	return 0;
 }
