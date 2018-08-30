@@ -31,7 +31,7 @@ class Solution {
 int main()
 {
     Solution s;
-    vector<int> vc = {1,2,3,4,5,7};
+    vector<int> vc = {7,2,3,4,5,1};
     std::cout<<s.firstMissingPositive(vc)<<std::endl;
     return 0;
 }
