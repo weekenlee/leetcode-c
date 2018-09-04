@@ -45,7 +45,7 @@ static void nextPermutation(int *nums, int numsSize)
 	reverse(p, numsSize - (p - nums));
 }
 
-int main31(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	
 	int i;
