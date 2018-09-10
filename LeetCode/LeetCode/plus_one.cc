@@ -30,4 +30,7 @@ int main(void) {
     for(auto i = r.begin(); i != r.end(); i++) {
        cout << *i <<endl; 
     }
+    for (auto &i : r) {
+        cout << i <<endl;
+    }
 }
