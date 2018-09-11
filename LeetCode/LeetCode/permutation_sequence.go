@@ -31,6 +31,7 @@ func getPermutation(n int, k int) string {
 	res[n-1]=rec[0]
 	return string(res)
 }
+
 func main() {
 	fmt.Println(getPermutation(10,3))
 }
