@@ -11,6 +11,7 @@ func isMatch(s, p string) bool {
 		dp[i] = make([]bool, pSize + 1)
 	}
 
+	// dp[i][j] 代表了s[:i] 能否与p[:j]匹配
 	dp[0][0] = true
 
 	for j:=1; j <pSize && dp[0][j-1]; j+=2 {
