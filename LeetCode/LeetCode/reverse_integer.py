@@ -16,6 +16,12 @@ class Solution(object):
         x = 0 if abs(x) > 0x7fffffff else x
         return x
 
+    def reverse3(self,x):
+        s=cmp(x,0)
+        r=int(repr(s*x)[::-1])
+        return s*r*(r<2**31)
+
 if __name__=="__main__":
     print(Solution().reverse(103))
     print(Solution().reverse2(103))
+    print(Solution().reverse3(103))
