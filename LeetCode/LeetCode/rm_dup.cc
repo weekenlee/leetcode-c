@@ -1,0 +1,37 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+class Solution {
+    public:
+        int removeDuplicates(vector<int>& nums) {
+            if(nums.empty()) {
+                return 0;
+            }
+
+            const int k = 2;
+            int left = 0;
+            int right = 1;
+
+            while(right < nums.size()) {
+                if(nums[left] != nums[right] ||
+                        (left - k + 1 < 0 || nums[left] != nums[left - k + 1])) {
+                    ++left;
+                    nums[left] = nums[right];
+                } 
+
+                ++right;
+            }
+
+            return left + 1;
+        }
+};
+
+int main()
+{
+    vector<int> v{1,2,2,2,3,4,5};
+    Solution().removeDuplicates(v);
+    for(auto i : v) {
+        cout <<i;
+    }
+    cout<<endl;
+}

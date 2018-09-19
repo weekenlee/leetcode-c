@@ -21,7 +21,7 @@ static int removeDuplicates(int *nums, int numsSize)
 }
 
 
-int main1(int argc, char **argv)
+int main(int argc, char **argv)
 {
 
 	int i, size = 10;
