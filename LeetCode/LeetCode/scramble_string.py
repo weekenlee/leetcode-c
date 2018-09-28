@@ -5,6 +5,7 @@ class Solution():
         if s1 == s2:
             return True
         result = [[[False for j in xrange(len(s2))] for i in xrange(len(s1))] for n in xrange(len(s1) + 1)]
+        print result
         for i in xrange(len(s1)):
             for j in xrange(len(s2)):
                 if s1[i] == s2[j]:
