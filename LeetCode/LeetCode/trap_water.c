@@ -45,12 +45,11 @@ static int trap(int *height, int heightSize)
 	return sum;
 }
 
-int main42(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i, count = 12;
 	int nums[12] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
 	
 	printf("%d\n", trap(nums, count));
-	getchar();
 	return 0;
 }
