@@ -37,4 +37,19 @@ static int numDistinct(char *s, char *t) {
         }
     }
 
+    for(i = 1; i < s_len - start; i++) {
+        for(j = 1; j < t_len; j++) {
+            dp[i][j] = dp[i - 1][j];
+            if(s[start + i] == t[j]) {
+                dp[i][j] += dp[i-1][j-1];
+            }
+        }
+    }
+
+    return dp[s_len - start - 1][t_len - 1];
+}
+
+int main(int argc, char **argv) {
+    printf("%d\n", numDistinct(argv[1], argv[2]));
+    return 0;
 }
