@@ -1,4 +1,7 @@
 #include <cstddef>
+#include <iostream>
+#include <initializer_list>
+using namespace std;
 
 struct ListNode {
     int val;
@@ -55,6 +58,7 @@ class Solution {
         frontBackSplit(head, &front, &back);
         printList(front);
         printList(back);
+        cout << endl;
         mergeSort(&front);
         mergeSort(&back);
         *headRef = sortedMerge(front, back);
@@ -64,7 +68,7 @@ class Solution {
         for(ListNode *cur = head; cur; cur = cur->next) {
             cout << cur->val <<"->";
         }
-        cout << "\bb "<<endl;
+        cout << "\b "<<endl;
     }
 
     public:
@@ -74,9 +78,6 @@ class Solution {
     }
 };
 
-#include <iostream>
-#include <initializer_list>
-using namespace std;
 
 ListNode *create_linkedlist(std::initializer_list<int> lst) {
     auto iter = lst.begin();
@@ -105,7 +106,7 @@ void printList(ListNode *head) {
 int main() 
 {
     Solution s;
-    ListNode *a = create_linkedlist({4,3,5,1,9});
+    ListNode *a = create_linkedlist({4,3,5,1,9,7,2});
     ListNode *ret = s.sortList(a);
     printList(ret);
     clear(ret);
