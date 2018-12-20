@@ -53,9 +53,18 @@ class Solution {
             return ;
         }
         frontBackSplit(head, &front, &back);
+        printList(front);
+        printList(back);
         mergeSort(&front);
         mergeSort(&back);
         *headRef = sortedMerge(front, back);
+    }
+
+    void printList(ListNode *head) {
+        for(ListNode *cur = head; cur; cur = cur->next) {
+            cout << cur->val <<"->";
+        }
+        cout << "\bb "<<endl;
     }
 
     public:
@@ -90,7 +99,7 @@ void printList(ListNode *head) {
     for(ListNode *cur = head; cur; cur = cur->next) {
         cout << cur->val <<"->";
     }
-    cout << "\b\b "<<endl;
+    cout << "\bb "<<endl;
 }
 
 int main() 
