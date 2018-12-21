@@ -26,9 +26,7 @@ class Solution {
     }
 };
 
-
 #include <iostream>
-
 int main()
 {
     Solution s;
