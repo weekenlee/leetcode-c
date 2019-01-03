@@ -38,4 +38,9 @@ class Solution {
 void printUndirectedGraph(UndirectedGraphNode *node) {
     std::ostringstream out;
     std::unordered_map<int,std::unordered_set<int>> map{0,std::unordered_set<int>(){}};
+    std::deque<UndirectedGraphNode*> cache;
+    cache.push_back(node);
+    do{
+        std::sort()
+    }
 }
