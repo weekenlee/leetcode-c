@@ -8,7 +8,7 @@ func wordBreak(s string, wordDict []string) bool {
 		return false
 	}
 
-	dict := make(map[string]bool , len(wordDict))
+	dict := make(map[string]bool, len(wordDict))
 	length := make(map[int]bool, len(wordDict))
 
 	for _, w := range wordDict {
