@@ -1,5 +1,6 @@
 package main
 
+<<<<<<< HEAD
 import (
     "fmt"
 	"github.com/aQuaYi/LeetCode-in-Go/kit"
@@ -8,6 +9,17 @@ import (
 type TreeNode = kit.TreeNode
 
 func preorderTraversal(root *TreeNode) []int {
+=======
+import "fmt"
+
+type TreeNode struct {
+	Val int
+	Left *TreeNode
+	Right *TreeNode
+}
+
+func preorderTraversal(root *TreeNode) {
+>>>>>>> 035e53e55b533602d2cd2e9684239982bc37b853
 	var rightStack []*TreeNode
 	var res []int
 
@@ -31,12 +43,18 @@ func preorderTraversal(root *TreeNode) []int {
 				rightStack = rightStack[:len(rightStack) - 1]
 			}
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 035e53e55b533602d2cd2e9684239982bc37b853
 	}
 	return res
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 035e53e55b533602d2cd2e9684239982bc37b853
 func main() {
 	fmt.Println("vim-go")
 }
