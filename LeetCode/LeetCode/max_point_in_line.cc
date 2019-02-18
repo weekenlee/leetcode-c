@@ -1,3 +1,9 @@
+#include<iostream>
+#include<vector>
+#include<unordered_map>
+#include<limits>
+
+using namespace std;
 
 struct Point {
     int x;
@@ -9,7 +15,7 @@ struct Point {
 
 class Solution {
     public:
-        int maxPoints(vecotr<Point> &points) {
+        int maxPoints(vector<Point> &points) {
             int max_points = 0;
             for (int i = 0; i < points.size(); ++i) {
                 unordered_map<double, int> slope_count;
@@ -23,7 +29,7 @@ class Solution {
                     } else {
                         auto slope = numeric_limits<double>::max();
                         if(start.x - end.x != 0) {
-                            slope = (start.y - end.y) * 1.0 / (start.x = end.x);
+                            slope = (start.y - end.y) * 1.0 / (start.x - end.x);
                         }
                         ++slope_count[slope];
                     }
