@@ -1,4 +1,5 @@
 #include<vector>
+#include<iostream>
 using namespace std;
 
 class Solution {
@@ -14,6 +15,7 @@ class Solution {
         }
 };
 
-int main() {
-    
+int maitor() {
+    vector<int> v{1,2,3,1};
+    cout << Solution().rob(v) <<endl;
 }
