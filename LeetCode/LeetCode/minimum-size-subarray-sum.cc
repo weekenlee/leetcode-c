@@ -22,6 +22,7 @@ class Solution {
 
 };
 
+
 #include<iostream>
 int main() {
     vector<int> v{2,3,1,2,4,3};
