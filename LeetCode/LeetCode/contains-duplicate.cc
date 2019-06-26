@@ -27,7 +27,7 @@ int main()
 {
     Solution s;
     Solution2 s2;
-    vector<int> v {1,2,3,1};
+    vector<int> v{1,2,3,1};
     cout << s.containsDuplicate(v) <<endl;
     cout << s2.containsDuplicate(v) <<endl;
 }
