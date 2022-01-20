@@ -6,7 +6,7 @@ static char* addBinary(char *a, char *b)
 {
     int len1 = strlen(a);
     int len2 = strlen(b);
-    int len = len1>len2?len1+1:len2+1;
+    int len = len1 > len2 ? len1+1 : len2+1;
     char *result = malloc(len + 1);
     result[len] = '\0';
     result[len - 1] = '\0';
@@ -29,6 +29,7 @@ static char* addBinary(char *a, char *b)
 }
 
 int main(int argc, char** argv){
+    printf("%s\n",addBinary("1","2"));
     printf("%s\n", addBinary(argv[1], argv[2]));
     return 0;
 }
